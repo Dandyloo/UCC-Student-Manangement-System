@@ -39,11 +39,21 @@ public class DatabaseHelper {
             );
         """;
 
+        String createUsersTable = """
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                full_name TEXT NOT NULL,
+                student_id TEXT NOT NULL UNIQUE,
+                password TEXT NOT NULL
+            );
+        """;
+
         try (Connection conn = connect();
              Statement stmt = conn.createStatement()) {
 
             stmt.execute(createLecturesTable);
             stmt.execute(createTasksTable);
+            stmt.execute(createUsersTable);
             System.out.println("Database initialized successfully.");
 
         } catch (SQLException e) {

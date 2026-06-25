@@ -1,33 +1,29 @@
 package com.ucc.studentlifemanager.ui;
 
+import com.ucc.studentlifemanager.model.User;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.geometry.Pos;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-/**
- * The persistent app shell shown after login.
- * Contains a sidebar (left) and a content area (center) that
- * gets swapped out depending on which screen is active.
- */
 public class MainLayout {
 
     private final BorderPane root;
     private final Stage stage;
+    private final User currentUser;
 
-    public MainLayout(Stage stage) {
+    public MainLayout(Stage stage, User currentUser) {
         this.stage = stage;
+        this.currentUser = currentUser;
         this.root = new BorderPane();
 
         root.setLeft(buildSidebar());
-        showDashboard(); // Dashboard is the default screen shown after login
+        showDashboard();
     }
 
     public BorderPane getRoot() {
@@ -88,6 +84,6 @@ public class MainLayout {
     }
 
     private void showProfile() {
-        root.setCenter(ProfileScreen.build(stage));
+        root.setCenter(ProfileScreen.build(stage, currentUser));
     }
 }
