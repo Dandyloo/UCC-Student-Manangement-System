@@ -1,0 +1,177 @@
+/* ===== Base ===== */
+.root {
+    -fx-background-color: #F5F5F7;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    -fx-background-color: #0A1F44; /* deep navy, slightly richer than before */
+    -fx-padding: 24 16 24 16;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 8;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B8C2D9;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 11 14 11 14;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #16285C;
+    -fx-text-fill: white;
+}
+
+/* ===== Screen titles ===== */
+.screen-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A1A2E;
+}
+
+/* ===== Primary action buttons ===== */
+.primary-button {
+    -fx-background-color: #D62246; /* refined UCC red */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 10;
+    -fx-padding: 10 22 10 22;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(214,34,70,0.35), 8, 0, 0, 2);
+}
+
+.primary-button:hover {
+    -fx-background-color: #B81A39;
+}
+
+/* ===== Secondary buttons ===== */
+.secondary-button {
+    -fx-background-color: white;
+    -fx-text-fill: #4A4A58;
+    -fx-font-size: 13px;
+    -fx-background-radius: 10;
+    -fx-padding: 10 22 10 22;
+    -fx-border-color: #E2E2E8;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #F0F0F4;
+}
+
+/* ===== Error text ===== */
+.error-label {
+    -fx-text-fill: #D62246;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* ===== Cards (Dashboard stats, etc.) ===== */
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(20,20,43,0.08), 14, 0, 0, 4);
+}
+
+/* ===== Text fields & inputs ===== */
+.text-field, .combo-box, .password-field {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #E2E2E8;
+    -fx-border-radius: 10;
+    -fx-padding: 9 12 9 12;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .combo-box:focused, .password-field:focused {
+    -fx-border-color: #D62246;
+}
+
+/* ===== Table ===== */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(20,20,43,0.06), 10, 0, 0, 2);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #FAFAFC;
+    -fx-background-radius: 14 14 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #6B6B7B;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #F0F0F4 transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FDEEF1;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #1A1A2E;
+}
+
+/* ===== Calendar widget ===== */
+.calendar-widget {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(20,20,43,0.08), 14, 0, 0, 4);
+}
+
+.calendar-month-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A1A2E;
+}
+
+.calendar-day-header {
+    -fx-text-fill: #9B9BAB;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.calendar-day {
+    -fx-text-fill: #4A4A58;
+    -fx-font-size: 12px;
+    -fx-background-radius: 50%;
+}
+
+.calendar-day-today {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-color: #D62246;
+    -fx-background-radius: 50%;
+}
+
+.card-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A1A2E;
+}
+
+.session-line {
+    -fx-font-size: 12px;
+    -fx-text-fill: #4A4A58;
+}
